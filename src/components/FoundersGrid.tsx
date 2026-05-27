@@ -39,7 +39,6 @@ export function FoundersGrid() {
           <Reveal key={f.name} delay={i * 0.1}>
             <div className="flex w-[180px] flex-col items-start gap-1.5">
               <div className="group relative mb-4 h-[180px] w-[180px]">
-                <div className="absolute inset-0 rounded-full bg-[var(--bq-navy-900)]" />
                 <Image
                   src={f.portrait}
                   alt={f.name}
