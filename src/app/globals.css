@@ -1,0 +1,244 @@
+@import "tailwindcss";
+
+/* =================================================================
+   BUILTIQ — Colors & Type (ported from the BUILTIQ Design System
+   colors_and_type.css). Montserrat is loaded via next/font and
+   exposed as --font-montserrat; --bq-font-sans points at it.
+   ================================================================= */
+
+:root {
+  /* ---------- Brand colors ------------------------------------- */
+  --bq-teal-900: #2A4A5A;   /* deepest — footer, hero block */
+  --bq-teal-800: #345A6E;   /* primary brand teal — main block */
+  --bq-teal-700: #4A7689;   /* mid teal — hover / accents */
+
+  --bq-blue-600: #6E8FA3;   /* desaturated mid-blue */
+  --bq-blue-500: #8FA9B8;   /* light steel blue — chevron shapes */
+  --bq-blue-400: #B6C7D2;   /* pale steel — soft callout fills */
+  --bq-blue-300: #D5DEE4;   /* very pale, almost gray-blue */
+
+  --bq-navy-900: #1F3A5C;   /* deep navy for portrait halos */
+
+  --bq-bg:        #FFFFFF;  /* page background */
+  --bq-bg-soft:   #F4F6F7;  /* secondary surface — feature row */
+  --bq-bg-warm:   #F7F4ED;  /* warm cream — bottom band */
+  --bq-panel:     #E5ECEF;  /* pale panel — hero copy block */
+  --bq-line:      #E1E5E8;  /* hairline rules */
+
+  --bq-ink-900:   #000000;  /* headlines */
+  --bq-ink-800:   #1A1A1A;  /* near-black body */
+  --bq-ink-700:   #2F2F2F;  /* body */
+  --bq-ink-500:   #6B7780;  /* muted */
+  --bq-ink-400:   #9BA7AF;  /* placeholder / disabled */
+
+  --bq-on-dark:        #FFFFFF;
+  --bq-on-dark-soft:   #C9D6DD;
+
+  --bq-success:  #4A7E5A;
+  --bq-warning:  #C68A2E;
+  --bq-danger:   #B0413E;
+  --bq-info:     var(--bq-teal-800);
+
+  /* ---------- Typography --------------------------------------- */
+  --bq-font-sans: var(--font-montserrat), 'Montserrat', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --bq-font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  --bq-w-light:    300;
+  --bq-w-regular:  400;
+  --bq-w-medium:   500;
+  --bq-w-semibold: 600;
+  --bq-w-bold:     700;
+  --bq-w-extra:    800;
+  --bq-w-black:    900;
+
+  --bq-text-xs:   12px;
+  --bq-text-sm:   14px;
+  --bq-text-base: 16px;
+  --bq-text-md:   18px;
+  --bq-text-lg:   20px;
+  --bq-text-xl:   24px;
+  --bq-text-2xl:  32px;
+  --bq-text-3xl:  44px;
+  --bq-text-4xl:  64px;
+  --bq-text-5xl:  88px;
+
+  --bq-track-tight:  -0.02em;
+  --bq-track-normal: 0em;
+  --bq-track-wide:   0.08em;
+  --bq-track-caps:   0.14em;
+
+  --bq-lh-tight: 1.05;
+  --bq-lh-snug:  1.2;
+  --bq-lh-body:  1.55;
+  --bq-lh-loose: 1.8;
+
+  --bq-space-1:  4px;
+  --bq-space-2:  8px;
+  --bq-space-3:  12px;
+  --bq-space-4:  16px;
+  --bq-space-5:  24px;
+  --bq-space-6:  32px;
+  --bq-space-7:  48px;
+  --bq-space-8:  64px;
+  --bq-space-9:  96px;
+  --bq-space-10: 128px;
+
+  --bq-radius-none: 0;
+  --bq-radius-sm:   2px;
+  --bq-radius-md:   4px;
+  --bq-radius-pill: 9999px;
+  --bq-radius-circle: 50%;
+
+  --bq-shadow-sm: 0 1px 2px rgba(20, 40, 55, 0.08);
+  --bq-shadow-md: 0 4px 16px rgba(20, 40, 55, 0.10);
+  --bq-shadow-lg: 0 18px 50px rgba(20, 40, 55, 0.14);
+
+  --bq-chevron-clip: polygon(0 12%, 50% 0, 100% 12%, 100% 100%, 0 100%);
+}
+
+/* ---------- Base ------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+html, body {
+  font-family: var(--bq-font-sans);
+  color: var(--bq-ink-800);
+  background: var(--bq-bg);
+  font-size: var(--bq-text-base);
+  line-height: var(--bq-lh-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--bq-blue-500);
+  outline-offset: 2px;
+}
+
+/* ---------- Semantic typography classes ------------------------- */
+.bq-display, h1.bq-display {
+  font-family: var(--bq-font-sans);
+  font-weight: var(--bq-w-black);
+  font-size: var(--bq-text-5xl);
+  line-height: var(--bq-lh-tight);
+  letter-spacing: var(--bq-track-tight);
+  color: var(--bq-ink-900);
+  margin: 0;
+}
+
+.bq-h1 {
+  font-family: var(--bq-font-sans);
+  font-weight: var(--bq-w-extra);
+  font-size: var(--bq-text-4xl);
+  line-height: var(--bq-lh-tight);
+  letter-spacing: var(--bq-track-tight);
+  color: var(--bq-ink-900);
+  margin: 0;
+}
+
+.bq-h2 {
+  font-family: var(--bq-font-sans);
+  font-weight: var(--bq-w-bold);
+  font-size: var(--bq-text-3xl);
+  line-height: var(--bq-lh-snug);
+  letter-spacing: var(--bq-track-tight);
+  color: var(--bq-ink-900);
+  margin: 0;
+}
+
+.bq-h3 {
+  font-family: var(--bq-font-sans);
+  font-weight: var(--bq-w-bold);
+  font-size: var(--bq-text-xl);
+  line-height: var(--bq-lh-snug);
+  letter-spacing: var(--bq-track-normal);
+  color: var(--bq-ink-900);
+  margin: 0;
+}
+
+.bq-eyebrow {
+  font-family: var(--bq-font-sans);
+  font-weight: var(--bq-w-bold);
+  font-size: var(--bq-text-sm);
+  line-height: var(--bq-lh-snug);
+  letter-spacing: var(--bq-track-caps);
+  text-transform: uppercase;
+  color: var(--bq-ink-900);
+}
+
+.bq-nav-link {
+  font-family: var(--bq-font-sans);
+  font-weight: var(--bq-w-semibold);
+  font-size: var(--bq-text-sm);
+  letter-spacing: var(--bq-track-caps);
+  text-transform: uppercase;
+  color: var(--bq-ink-900);
+  text-decoration: none;
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.bq-nav-link:hover { opacity: 0.7; }
+.bq-nav-link.is-active { border-bottom: 1px solid var(--bq-ink-900); padding-bottom: 2px; }
+
+.bq-body {
+  font-family: var(--bq-font-sans);
+  font-weight: var(--bq-w-regular);
+  font-size: var(--bq-text-base);
+  line-height: var(--bq-lh-body);
+  color: var(--bq-ink-800);
+}
+
+.bq-body-sm {
+  font-family: var(--bq-font-sans);
+  font-weight: var(--bq-w-regular);
+  font-size: var(--bq-text-sm);
+  line-height: var(--bq-lh-body);
+  color: var(--bq-ink-700);
+}
+
+.bq-lead {
+  font-family: var(--bq-font-sans);
+  font-weight: var(--bq-w-regular);
+  font-size: var(--bq-text-md);
+  line-height: var(--bq-lh-body);
+  color: var(--bq-ink-700);
+}
+
+.bq-caption {
+  font-family: var(--bq-font-sans);
+  font-weight: var(--bq-w-medium);
+  font-size: var(--bq-text-sm);
+  line-height: var(--bq-lh-body);
+  color: var(--bq-blue-600);
+}
+
+.bq-name {
+  font-family: var(--bq-font-sans);
+  font-weight: var(--bq-w-bold);
+  font-size: var(--bq-text-base);
+  letter-spacing: var(--bq-track-normal);
+  color: var(--bq-ink-900);
+}
+
+.bq-mono {
+  font-family: var(--bq-font-mono);
+  font-weight: var(--bq-w-regular);
+  font-size: var(--bq-text-sm);
+}
+
+/* ---------- Animations (restrained, brand-aligned) -------------- */
+@keyframes bq-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+.bq-float { animation: bq-float 6s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}

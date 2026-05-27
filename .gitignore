@@ -1,0 +1,12 @@
+# Next.js build output
+.next/
+out/
+
+# Dependencies (covered by root, but explicit here too)
+node_modules/
+
+# Environment
+.env*.local
+
+# Vercel
+.vercel
