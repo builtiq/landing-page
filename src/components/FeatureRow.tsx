@@ -41,7 +41,7 @@ export function FeatureRow() {
           ────────────────────────────────────────────────────────────────── */}
       <div className="hidden md:absolute md:left-[3vw] md:bottom-[-13vh] md:top-auto md:mx-0 md:mb-0 md:w-[26vw] md:max-w-[380px] md:block z-[10]">
         <Image
-          src="/person-tablet.png"
+          src="/person-tablet.svg"
           alt="Operator reviewing building systems on a tablet"
           width={340}
           height={420}
