@@ -34,7 +34,7 @@ export function ContactBand() {
   return (
     <section id="contact" className="bg-[var(--bq-teal-800)] px-6 py-16 text-white md:px-0">
       <Reveal>
-        <div id="waitlist" className="max-w-2xl scroll-mt-28 md:ml-[33%]">
+        <div id="waitlist" className="max-w-2xl scroll-mt-32 md:ml-[33%]">
           <h2 className="m-0 text-[22px] font-bold uppercase tracking-[0.14em] text-white">
             Join the waitlist
           </h2>
