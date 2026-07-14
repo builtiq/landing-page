@@ -78,8 +78,8 @@ export function Hero() {
       {/* Background-only slab — spans the full original width (behind building + text panel).
           Hidden on mobile; the text panel provides the grey bg there. */}
       <div
-        className="hidden md:block md:absolute md:left-[5%] md:top-[15vh] md:w-[80%] z-[2]"
-        style={{ height: '40vh', backgroundColor: 'rgba(229, 236, 239, 0.7)' }}
+        className="hidden md:block md:absolute md:left-[5%] md:top-[15vh] md:h-[46vh] md:w-[80%] z-[2]"
+        style={{ backgroundColor: 'rgba(229, 236, 239, 0.7)' }}
         aria-hidden="true"
       />
 
@@ -88,9 +88,8 @@ export function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.15, ease: [0.4, 0, 0.2, 1] }}
         className="relative z-[3] mx-4 mt-6 px-8 py-10
-                   md:absolute md:left-[5%] md:top-[15vh] md:mx-0 md:mt-0 md:w-[38%] md:py-12 lg:px-12"
+                   md:absolute md:left-[5%] md:top-[15vh] md:mx-0 md:mt-0 md:h-[46vh] md:w-[38%] md:py-12 lg:px-12"
         style={{
-          height: '40vh',
           // No background here — the slab behind provides the shared grey background.
           // This prevents double-stacking opacity on the left side.
         }}
@@ -107,6 +106,12 @@ export function Hero() {
           clear answers in real time: what&rsquo;s happening, where the problem is, where
           energy is leaking.
         </p>
+        <a
+          href="#waitlist"
+          className="mt-7 inline-flex rounded-full bg-[var(--bq-teal-800)] px-6 py-3 text-sm font-bold uppercase tracking-[0.08em] text-white transition-opacity duration-200 hover:opacity-80"
+        >
+          Join the waitlist
+        </a>
       </motion.div>
     </section>
   );

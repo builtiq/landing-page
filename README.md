@@ -1,6 +1,6 @@
 # BUILTIQ — Landing Page
 
-Marketing website for [BUILTIQ](https://builtiq.com) — an intelligence layer for buildings that connects to existing systems and turns their data into clear, real-time answers.
+Marketing website for [BUILTIQ](https://builtiq.org) — an intelligence layer for buildings that connects to existing systems and turns their data into clear, real-time answers.
 
 ## Stack
 
@@ -9,6 +9,7 @@ Marketing website for [BUILTIQ](https://builtiq.com) — an intelligence layer f
 - **Animations:** Framer Motion
 - **Font:** Montserrat (Google Fonts)
 - **Deployment:** Vercel
+- **Waitlist:** Supabase (`builtiq-page`)
 
 ## Getting started
 
@@ -18,6 +19,15 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
+
+The waitlist API requires these server-only environment variables:
+
+```bash
+SUPABASE_URL=
+SUPABASE_SERVICE_ROLE_KEY=
+```
+
+Never expose the service-role key through a `NEXT_PUBLIC_` variable.
 
 ## Project structure
 

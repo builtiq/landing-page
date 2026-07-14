@@ -28,7 +28,7 @@ export function Header() {
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-12 md:flex">
+        <nav className="hidden items-center gap-6 md:flex lg:gap-10">
           {LINKS.map((l) => (
             <a
               key={l.id}
@@ -38,6 +38,12 @@ export function Header() {
               {l.label}
             </a>
           ))}
+          <a
+            href="#waitlist"
+            className="rounded-full bg-[var(--bq-teal-800)] px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-white transition-opacity duration-200 hover:opacity-80"
+          >
+            Join waitlist
+          </a>
         </nav>
 
         {/* Mobile toggle */}
@@ -65,6 +71,13 @@ export function Header() {
               {l.label}
             </a>
           ))}
+          <a
+            href="#waitlist"
+            onClick={() => setOpen(false)}
+            className="w-fit rounded-full bg-[var(--bq-teal-800)] px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-white"
+          >
+            Join waitlist
+          </a>
         </nav>
       )}
     </header>
