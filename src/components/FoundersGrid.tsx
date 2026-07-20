@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { Chevron } from './Decorative';
 import { Reveal } from './Reveal';
 
@@ -11,9 +12,11 @@ const FOUNDERS = [
     desc: ['Design', 'strategy', 'and user', 'experience'],
   },
   {
-    name: 'Oskars',
+    name: 'Oskars Zvingulis',
+    role: 'CEO & Co-founder',
     portrait: '/portrait-oskars.png',
-    desc: ['Technical &', 'code ·', 'mechanic', 'turned', 'developer'],
+    desc: ['Product,', 'engineering', 'and AI', 'workflows'],
+    href: '/team/oskars-zvingulis',
   },
   {
     name: 'Jānis',
@@ -48,8 +51,16 @@ export function FoundersGrid() {
                   className="absolute bottom-0 left-[-12%] w-[125%] max-w-none object-contain transition-transform duration-200 group-hover:-translate-y-1"
                 />
               </div>
-              <div className="bq-name">{f.name}</div>
-              <div className="mb-3.5 text-sm font-medium text-[var(--bq-blue-600)]">Co-founder</div>
+              {f.href ? (
+                <Link href={f.href} className="bq-name transition-colors hover:text-[var(--bq-blue-600)]">
+                  {f.name}
+                </Link>
+              ) : (
+                <div className="bq-name">{f.name}</div>
+              )}
+              <div className="mb-3.5 text-sm font-medium text-[var(--bq-blue-600)]">
+                {'role' in f ? f.role : 'Co-founder'}
+              </div>
               <div className="text-xs font-semibold uppercase leading-[1.5] tracking-[0.12em] text-[var(--bq-blue-600)]">
                 {f.desc.map((line) => (
                   <span key={line} className="block">
